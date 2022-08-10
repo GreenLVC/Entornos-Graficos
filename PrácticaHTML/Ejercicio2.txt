@@ -1,0 +1,60 @@
+Analizar los siguientes segmentos de código indicando en qué sección del documento HTML se colocan, cuál es el efecto que producen y señalar cada uno de los elementos, etiquetas, y atributos (nombre y valor), aclarando si es obligatorio.
+
+2.a)
+<!-- Código controlado el día 12/08/2009 -->
+Se coloca en cualquier parte del documento, es un comentario donde "<!--" marca el principio del comentario y  "-->" el final, en el medio se escribe el texto que quiere comentarse.
+
+2.b)
+<div id="bloque1">Contenido del bloque1</div>
+Div es una etiqueta de bloque, define una división o sección en el documento. Se utiliza dentro del cuerpo, entre etiquetas <body></body>
+id define la identificación para el elemento de bloque, en este caso la identificacion es "bloque 1". Se requiere para el uso de conjunto de otras herramientas como CSS y JavaScript.
+
+
+2.c)
+<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32" longdesc="detalles.htm" />
+La etiqueta <img> se utiliza para incrustar imágenes en html, en el cuerpo del documento.
+src define la ubicación de dicha imagen.
+alt define un texto alternativo en caso de que la imagen no pueda cargarse
+name da un nombre al elemento. Inválido en HTML5
+width y height definen el ancho y alto de la imágen, en pixeles
+longdesc es el el URI de un recurso con una explicación más extensa del contenido/propósito de la imagen
+
+2.d)
+<meta name="keywords" lang="es" content="casa, compra, venta, alquiler " /> <meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+El elemento meta provee metadatos que no pueden ser expresados con otros elementos, va en el encabezado
+name provee metadatos a nivel de documento organizados en pares nombre-valor, name provee el nombre
+keywords: un conjunto de identificadores separados por comas, cada uno de los cuales es una palabra clave que describe de alguna manera los contenidos del documento.
+lang define el idioma del documento, es - español
+content especifica los valores que tomara el par nombre-valor
+http-equiv atributo que declara el tipo de una directiva pragma, los valores se definen en content
+expires: momento en el que expira el documento
+
+
+2.e)
+<a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8" rel="help">Resumen HTML </a>
+La etiqueta <a> representa un vínculo
+href hace referencia a la posición de ese vínculo, en este caso una página Web
+type hace referencia al tipo de contenido que se espera del vínculo
+hreflang identifica el lenguaje del vínculo
+charset indica la cod. de carácteres del vínculo (obsoleto en html5)
+rel identifica el significado que el vínculo tiene al documento actuual
+
+2.f)
+<table width="200" summary="Datos correspondientes al ejercicio vencido"> <caption align="top"> Título </caption> <tr>
+<th scope="col">&nbsp;</th> <th scope="col">A</th> <th scope="col">B</th> <th scope="col">C</th>
+</tr> <tr>
+<th scope="row">1º</th> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td>
+</tr> <tr>
+<th scope="row">2º</th> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td>
+</tr>
+</table>
+
+La etiqueta <table> define una tabla de contenidos
+width define el ancho de la tabla en pixeles
+summary es un resumen del propósito de la tabla
+
+La etiqueta <caption> representa un título o leyenda para la tabla
+tr representa una fila, debe estar dentro de table
+th es el encabezado de dicha tabla debe estar dentro de tr
+scope es un grupo de celdas para las cuales esta celda brinda información de encabezado
+td reoresenta una selda regular, debe estar dentro de tr

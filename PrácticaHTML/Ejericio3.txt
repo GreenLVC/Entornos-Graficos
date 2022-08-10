@@ -1,0 +1,16 @@
+En cada caso, explicar las diferencias entre los segmentos de código y sus visualizaciones:
+
+    <a href="http://www.google.com.ar">Click aquí para ir a Google</a>
+    Representa un vínculo que lleva a la página de google que se abre en la misma ventana
+
+    <a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a>
+    Representa un vínculo que lleva a la página de google que se abre una nueva ventana
+
+    <a href="http://www.google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">
+    Representa un vínculo que lleva a la página de google definido como vínculo de ayuda de contexto, definiendo su tipo, lenguage y charset, sin embarno no puede ser utilizado por el usuario ya que no aparece el link en la página.
+
+    <a href="#">Click aquí para ir a Google</a>
+    Representa un vínculo que lleva a la misma página en la que nos encontramos
+
+    <a href="#arriba">Click aquí para volver arriba</a>
+    Representa un vínculo que lleva a la parte superior de la misma página en la que nos encontramos
