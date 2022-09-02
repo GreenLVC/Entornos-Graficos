@@ -1,0 +1,76 @@
+1. ¿Qué es CSS y para qué se usa?
+    CSS son las siglas de Cascade Style Sheet que traducido significa hojas de estilo en cascada. Las hojas de estilo es una tecnología que nos permite controlar la apariencia de una
+    página webes decir, se utiliza para dar estilo a documentos HTML y XML, separando el contenido de la presentación.
+
+2. CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan?
+    Una hoja de estilo está formada por una o varias sentencias:
+    Ej
+        @charset "utf8";
+        h1{
+            color:white;
+            background-color: black;
+        }
+        p{
+            color:red;
+            background-color:lightyellow;
+        }
+    Existen dos tipos de sentencias: las reglas-arroba (@charset) y las reglas (h1 o p)
+    Las reglas-arroba empiezan por el símbolo de arroba (@) pegado a un identificador y terminan por un punto y coma (;)
+    Algunas reglas-arroba (@charset, @import o @namespace) deben aparecer al principio de la hoja de estilo, pero el resto (@font-face, @media, etc.) pueden escribirse en cualquier lugar de la hoja de estilo.
+    Las reglas están formadas por un selector y un bloque de declaración. El bloque de declaración empieza y acaba con llaves { }.
+
+    Cada declaración está formada por una o varias propiedades y sus valores correspondientes. Las propiedades van separadas entre sí por puntos y comas. El valor (o valores) van separados de las propiedades por dos puntos. En general, si una propiedad necesita varios valores estos van separados por espacios en blanco, y si tiene varios valores alternativos se separan con comas.
+
+3. ¿Cuáles son las tres formas de dar estilo a un documento?
+    Podemos asociar las reglas de estilo a las marcas HTML de tres maneras:
+        - directamente a la marca
+        - en el head de la página
+        - agrupando las reglas de estilo en un archivo independiente con extensión *.css
+
+4. ¿Cuáles son los distintos tipos de selectores más utilizados? Ejemplifique cada uno.
+    Selectores de elementos: selecciona elementos HTML en función de su nombre.
+        h2{color: blue}
+
+    Selector universal(*): selecciona todos los elementos HTML.
+        *{margin:0.1;}
+
+    Selector de clase: es la forma más comun de aplicar estilos, se agrega el atrtibuto "class" al elemento que se quiere modificar. Antes de la clase se coloca un punto (.).
+        <p class='myclass'>Ejercicio n°1 de CSS</p>
+
+        .myclass{
+            color:red;
+            font-size:10px;
+        }
+
+    Se puede agregar más de una clase.
+
+    Selector ID: similar al de clase, pero lleva un # antes y puede usarse en un único elemento.
+        <p id="unid">Un párrafo</p>
+
+        #unid{
+            background: blue;
+        }
+
+    Agrupación de selectores: si queremos que distintos elementos tengaun un mismo estilo, se pueden separar con comas
+        h2,p{color: red}
+
+5. ¿Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos?
+    Las pseudo-clases son palabras claves que se agregan a los selectores CSS para especificar un estado sobre el elemento seleccionado:
+
+    :link hace referencia a un enlace (href) y apunta a un link que no fue visitado
+
+    :visited refiere a un enlace que ya ha sido visitado
+
+6. ¿Qué es la herencia?
+    Es un mecanismo mediante el cual determinadas propiedades de un elemento "padre" se transmiten a sus "hijos".
+    Mediante la herencia, se pueden especificar las propiedades de las fuentes de los elementos "html" o "body" y todo el resto de elementos los heredarán.
+
+7. ¿En qué consiste el proceso denominado cascada?
+    El formato final de cualquier elemento depende de la combinación de todas las propiedades que afectan al elemento. La denominación de hojas de estilo en cascada hace referencia precisamente a este hecho.
+    Hay tres conceptos principales que controlan el orden en el que se aplican las declaraciones de CSS:
+
+        Importancia. La importancia de una declaración de CSS depende de dónde se ha especificado. Las declaraciones contrapuestas se aplicarán en orden tal que las nuevas anularán a las más antiguas.
+
+        Especificidad. La especificidad es algo que todos los autores de CSS deben comprender y tener en cuenta.
+
+        Orden en las fuentes. Si dos declaraciones afectan al mismo elemento, tienen la misma importancia y la misma especificidad, la señal distintiva final es el orden en las fuentes. La última declaración "ganará" a las anteriores.

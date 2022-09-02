@@ -1,0 +1,26 @@
+p#normal {
+    font-family: arial,helvetica;   <!-- Selecciona los párrafos con dicho id. cambia la fuente de la letra -->
+    font-size: 11px;                <!-- cambia el tamaño de la letra -->
+    font-weight: bold;              <!-- pone la letra en negrita -->
+}
+*#destacado {
+    border-style: solid;            <!-- Selecciona todos los elementos que cumplan con el id. Agrega un borde sólido -->
+    border-color: blue;             <!-- Pone el borde de color azul -->
+    border-width: 2px;              <!-- Asigna el grosor del borde de 2 pixeles -->
+}
+#distinto {
+    background-color: #9EC7EB;      <!-- Selecciona los elementos con dicho id. Le da un color de fondo -->
+    color: red;                     <!-- Cambia el color del elemento a rojo -->
+}
+
+<p id="normal">Este es un párrafo</p>           cumple con la regla p#normal
+
+<p id="destacado">Este es otro párrafo</p>      cumple con la regla destacado
+
+<table id="destacado">                          cumple con la regla destacado
+    <tr>
+        <td>Esta es una tabla</td>
+    </tr>
+</table>
+
+<p id="distinto">Este es el último párrafo</p>  cumple con la regla distinto

@@ -1,0 +1,34 @@
+* {color:green; }
+a:link {color:gray }
+a:visited{color:blue }
+a:hover {color:fuchsia }
+a:active {color:red }
+p {font-family: arial,helvetica;font-size: 10px;color:black; }
+.contenido{font-size: 14px;font-weight: bold; }
+
+<body>                                                          Todos los elementos en principio se ven en verde
+    <p class="contenido" style="font-weight: normal;">              Este párrafo se ve con letra arial helvetica, tamaño 14px, en negro y con peso en negrita
+        Este es un texto ...............
+    </p>
+    <table>
+        <tr>
+            <td>Y esta es una tabla.......</td>
+        </tr>
+        <tr>
+            <td><a href="http://www.google.com.ar">con un enlace</a></td>     Este link va a cambiar según el usuario realize ciertas acciones (si no hace nada se ve gris, si pasa
+                                                                            el mourse por encima fucsia, si el link está activo se ve rojo, si fue visitado se ve azul)
+        </tr>
+    /table>
+</body>
+
+<body class="contenido">                                        Todos los elementos en principio se ven en verde, con tamaño de letra 14px y en negrita
+    <p> Este es un texto................</p>                    Este párrafo se ve con letra arial helvetica, tamaño 10px, en negro y con peso normañ
+    <table>
+        <tr>
+            <td>Y esta es una tabla.......</td>
+        </tr>
+        <tr>
+            <td><a href="http://www.google.com.ar">con un enlace</a></td>  Este link funciona como el anterior
+        </tr>
+    </table>
+</body>

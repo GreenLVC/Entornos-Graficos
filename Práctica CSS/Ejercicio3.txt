@@ -1,0 +1,30 @@
+p.quitar {                  Solo los párrafos con la clase quitar pueden utilizar esta regla
+    color: red;
+}
+*.desarrollo {              Solo los elementos con las clase desarrollo pueden utilizar esta regla
+    font-size: 8px;
+}
+.importante {               Solo los elementos con las clase importante utilizan esta regla
+    font-size: 20px;
+}
+
+<p class="desarrollo">                                               Este párrafo se ve con letra de tamaño 8px
+    En este primer párrafo trataremos lo siguiente:
+    <br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p class="quitar">                                                   Este parrafo se ve con letra en rojo
+    Este párrafo debe ser quitado de la obra…
+    <br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p >                                                                 Este párrafo se ve normal
+    En este otro párrafo trataremos otro tema:
+    <br /> xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p class="importante">                                               Este párrafo se ve con letra de tamaño 20px
+    Y este es el párrafo más importante de la obra…
+    <br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</ p>
+
+<h1 class="quitar">Este encabezado también debe ser quitado de la obra</h1>               Este encabezado no se ve afectado por la regla quitar
+
+<p class="quitar importante">Se pueden aplicar varias clases a la vez</p>                 Este párrafo se ve en rojo y con tamaño 20 px
