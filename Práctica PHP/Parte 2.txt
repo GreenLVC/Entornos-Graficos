@@ -1,0 +1,85 @@
+Ejercicio 1: Indicar si los siguientes códigos son equivalentes.
+    Si son equivalentes
+
+    <?php
+    $a = array( 'color' => 'rojo',
+                'sabor' => 'dulce',
+                'forma' => 'redonda',
+                'nombre' => 'manzana',
+                4
+            );
+    ?>
+
+    <?php
+    $a['color'] = 'rojo';
+    $a['sabor'] = 'dulce';
+    $a['forma'] = 'redonda';
+    $a['nombre'] = 'manzana';
+    $a[] = 4;
+    ?>
+
+Ejercicio 2: En cada caso, indicar las salidas correspondientes:
+    a)La salida es bar 1
+        <?php
+        $matriz = array("x" => "bar", 12 => true);
+        echo $matriz["x"];
+        echo $matriz[12];
+        ?>
+    b)La salida es 5 9 42
+        <?php
+        $matriz = array("unamatriz" => array(6 => 5, 13 => 9, "a" => 42));
+        echo $matriz["unamatriz"][6];
+        echo $matriz["unamatriz"][13];
+        echo $matriz["unamatriz"]["a"];
+        ?>
+
+    c)No devuelve nada
+        <?php
+        $matriz = array(5 => 1, 12 => 2);
+        $matriz[] = 56;
+        $matriz["x"] = 42;
+        unset($matriz[5]);
+        unset($matriz);
+        ?>
+
+Ejercicio 3: En cada caso, indicar las salidas correspondientes:
+    a)La salida es "Has entrado en esta pagina a las 14 horas, con 57 minutos y 52 segundos, del 1/10/2022"
+
+    <?php
+    $fun = getdate();
+    echo "Has entrado en esta pagina a las $fun[hours] horas, con $fun[minutes] minutos y $fun[seconds] segundos, del $fun[mday]/$fun[mon]/$fun[year]";
+    ?>
+
+    b)La salida es 5 + 6 = 11
+
+    <?php
+    function sumar($sumando1,$sumando2){
+        $suma=$sumando1+$sumando2;
+        echo $sumando1."+".$sumando2."=".$suma;
+        }
+    sumar(5,6);
+    ?>
+
+Ejercicio 4: Analizar la siguiente función, y escribir un script para probar su funcionamiento:
+    function comprobar_nombre_usuario($nombre_usuario){    //Toma como parámetro el nombre de usuario
+        //compruebo que el tamaño del string sea válido.
+        if (strlen($nombre_usuario)<3 || strlen($nombre_usuario)>20){       // compara la longitud del parámetro con 3 y 20, si no está entre esos valores es True
+            echo $nombre_usuario . " no es válido<br>";     // devuelve el parámetro junto al mensaje "no es válido"
+            return false;
+            }
+        //compruebo que los caracteres sean los permitidos
+        $permitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_";
+        for ($i=0; $i<strlen($nombre_usuario); $i++){                              //compara cada caracter del nombre de usuario con los de la variable permitidos
+            if (strpos($permitidos, substr($nombre_usuario,$i,1))===false){       //strpos encuentra la posición de la primera aparición de cada caracter, si algún caracter no se encuentra en permitidos devuelve true
+                echo $nombre_usuario . " no es válido<br>";
+                return false;
+            }
+        }
+        echo $nombre_usuario . " es válido<br>";
+        return true;
+    }
+
+
+
+
+
